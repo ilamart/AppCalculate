@@ -1,0 +1,10 @@
+C:\Users\l.kukharenko\source\repos\AppCalculate\AppCalculate\obj\Debug\AppCalculate.csprojAssemblyReference.cache
+C:\Users\l.kukharenko\source\repos\AppCalculate\AppCalculate\obj\Debug\AppCalculate.Properties.Resources.resources
+C:\Users\l.kukharenko\source\repos\AppCalculate\AppCalculate\obj\Debug\AppCalculate.csproj.GenerateResource.cache
+C:\Users\l.kukharenko\source\repos\AppCalculate\AppCalculate\obj\Debug\AppCalculate.csproj.CoreCompileInputs.cache
+C:\Users\l.kukharenko\source\repos\AppCalculate\AppCalculate\bin\Debug\AppCalculate.exe.config
+C:\Users\l.kukharenko\source\repos\AppCalculate\AppCalculate\bin\Debug\AppCalculate.exe
+C:\Users\l.kukharenko\source\repos\AppCalculate\AppCalculate\bin\Debug\AppCalculate.pdb
+C:\Users\l.kukharenko\source\repos\AppCalculate\AppCalculate\obj\Debug\AppCalculate.exe
+C:\Users\l.kukharenko\source\repos\AppCalculate\AppCalculate\obj\Debug\AppCalculate.pdb
+C:\Users\l.kukharenko\source\repos\AppCalculate\AppCalculate\obj\Debug\AppCalculate.AppCalculate.resources
