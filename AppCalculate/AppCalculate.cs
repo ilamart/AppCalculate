@@ -14,7 +14,7 @@ namespace AppCalculate
             InitializeComponent();
 
             Load += LoadEvent;
-            button1.Text = "Рассчитать";
+            btnCalculate.Text = "Рассчитать";
             //textBox1.TextChanged += TextBox1_TextChanged;
         }
 
