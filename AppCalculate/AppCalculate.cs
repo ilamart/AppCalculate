@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace AppCalculate
@@ -24,30 +23,30 @@ namespace AppCalculate
             var log = ReadLog();
             foreach (var itemLog in log)
             {
-                ListViewItem item = listView1.Items.Add(itemLog);
-                listView1.Items[listView1.Items.Count - 1].EnsureVisible();
+                ListViewItem item = listViewHistory.Items.Add(itemLog);
+                listViewHistory.Items[listViewHistory.Items.Count - 1].EnsureVisible();
             }
         }
 
-        private void TextBox1_TextChanged(object sender, EventArgs e)
+        private void TxtExpression_TextChanged(object sender, EventArgs e)
         {
-            //label2.Text = textBox1.Text;
+            //label2.Text = TxtExpression_TextChanged.Text;
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void BtnCalculate_Click(object sender, EventArgs e)
         {
-            var s = textBox1.Text;
+            var s = TxtExpression_TextChanged.Text;
             if (s != " " && s != "")
             {
-                textBox1.Text = "";
-                listView1.Items.Add(s);
+                TxtExpression_TextChanged.Text = "";
+                listViewHistory.Items.Add(s);
                 WriteLog(s);
                 StringCalc rez = new StringCalc();
                 var rezResult = rez.DoCalculation(s);
                 
-                listView1.Items.Add(rezResult.ToString());
-                listView1.Refresh();
-                listView1.Items[listView1.Items.Count - 1].EnsureVisible();
+                listViewHistory.Items.Add(rezResult.ToString());
+                listViewHistory.Refresh();
+                listViewHistory.Items[listView1.Items.Count - 1].EnsureVisible();
                 WriteLog(rezResult.ToString());
             }
             else
@@ -73,17 +72,14 @@ namespace AppCalculate
             
         }
 
-        private static List<string> ReadLog()
+        private static IEnumerable<string> ReadLog()
         {
             using (StreamReader sr = new StreamReader(LogFileName, System.Text.Encoding.Default))
             {
-                string line;
-                var list = new List<string>();
-                while ((line = sr.ReadLine()) != null)
+                while (!sr.EndOfStream)
                 {
-                    list.Add(line);
+                    yield return sr.ReadLine();
                 }
-                return list;
             }
         }
     }
